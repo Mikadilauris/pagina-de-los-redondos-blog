@@ -1,0 +1,276 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y PALETA DE COLORES
+   ========================================================================== */
+
+/* Movimiento suave al hacer clic en el menú */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fondo amarillo vibrante para todo el sitio */
+body {
+    background-color: #FFDE4D; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   CABECERA (HEADER)
+   ========================================================================== */
+.blog-header {
+    background-color: #CC0000; /* Rojo oscuro profesional */
+    color: white;
+    padding: 40px 20px; /* Más espacio vertical para que respire */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra elegante hacia abajo */
+    border-bottom: 4px solid #990000; /* Un rojo aún más oscuro en la base */
+}
+
+/* ==========================================================================
+   MENÚ DE NAVEGACIÓN FIJO (Sticky Menu)
+   ========================================================================== */
+.nav-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #222; /* Contraste oscuro que resalta con el amarillo y rojo */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto al pasar el mouse por el menú */
+.nav-menu a:hover {
+    color: #FFDE4D; /* El texto brilla en el amarillo de tu marca */
+    transform: scale(1.05); /* Sutil efecto de agrandado */
+}
+
+/* ==========================================================================
+   TARJETAS DE LOS ARTÍCULOS (POSTS)
+   ========================================================================== */
+.post {
+    background-color: white;
+    border-left: 6px solid #CC0000; /* Detalle en rojo grueso */
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 800px;
+    border-radius: 8px; /* Bordes redondeados y modernos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Efecto flotante al pasar el mouse por encima de la tarjeta */
+.post:hover {
+    transform: translateY(-5px); /* La tarjeta se eleva sutilmente */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra más profunda */
+}
+
+/* Títulos dentro de cada artículo */
+.post h2 {
+    color: #CC0000; 
+    margin-top: 0; 
+    margin-bottom: 10px;
+}
+
+/* Enlaces o textos planos con etiquetas <a> comunes dentro de los posts */
+.post a {
+    color: #CC0000;
+    text-decoration: none; 
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.post a:hover {
+    border-color: #CC0000; 
+}
+
+/* ==========================================================================
+   BOTONES DE ACCIÓN (ESTILO 3D RICOTERO)
+   ========================================================================== */
+.btn-read-more, .contact-form button {
+    display: inline-block;
+    background-color: #CC0000;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    box-shadow: 0 4px 0 #4a0101; /* Sombra sólida que da efecto 3D */
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+    text-transform: uppercase;
+}
+
+/* Efecto de "presionado" al pasar el mouse */
+.btn-read-more:hover, .contact-form button:hover {
+    background-color: #b30000;
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #edde06; /* La sombra se achica */
+}
+
+/* ==========================================================================
+   FORMULARIO DE CONTACTO (MEJORADO)
+   ========================================================================== */
+.contact-form {
+    max-width: 500px; 
+    margin: 20px 0;   
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; 
+    text-align: left;       
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ccc; /* Bordes un poco más definidos */
+    border-radius: 6px;       
+    font-size: 1rem;
+    font-family: inherit;      
+    box-sizing: border-box;    
+    background-color: #fafafa;
+    transition: all 0.3s ease; 
+}
+
+/* CORRECCIÓN: El foco ahora cambia a ROJO y AMARILLO para combinar con tu blog */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #CC0000;     /* Borde rojo al escribir */
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(204, 0, 0, 0.2); /* Resplandor rojo sutil */
+    outline: none;             
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+/* Íconos de redes sociales */
+.social-networks {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.social-networks a {
+    font-size: 2rem;
+    color: #CC0000; /* Íconos en color rojo */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-networks a:hover {
+    color: #222; /* Se vuelve oscuro al pasar el mouse */
+    transform: scale(1.2);
+    border: none;
+}
+
+/* Sección de comentarios */
+.comments-section {
+    border-left-color: #222; /* Un borde oscuro para diferenciarlo de los álbumes */
+}
+
+.comment-box {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border-left: 3px solid #CC0000;
+}
+
+.comment-author {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #222;
+    margin: 0 0 5px 0;
+}
+
+.comment-author i {
+    color: #CC0000;
+    margin-right: 5px;
+}
+
+.comment-author span {
+    font-weight: normal;
+    color: #777;
+    font-size: 0.8rem;
+}
+
+.comment-text {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+/* ==========================================================================
+   GALERÍA DE FOTOS DE LA MISA
+   ========================================================================== */
+
+/* Contenedor tipo grilla moderna */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* Caja contenedora de cada imagen y su texto */
+.gallery-item {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima de la foto de la galería */
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+/* Configuración de las imágenes */
+.gallery-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Recorta la imagen automáticamente para que todas midan igual sin deformarse */
+    border-radius: 4px;
+}
+
+/* Epígrafe o pie de la foto */
+.img-caption {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 8px 0 0 0;
+    font-style: italic;
+    font-weight: 500;
+}
+

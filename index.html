@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog - Los Redondos</title>
+    <!-- Font Awesome para los íconos de redes sociales -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Conexión a tu archivo CSS -->
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+    <div class="blog-container">
+        
+        <!-- CABECERA -->
+        <header class="blog-header" id="inicio">
+            <h1>Los Redondos</h1>
+            <p>By MICA</p>
+        </header>
+
+        <!-- MENÚ DE NAVEGACIÓN (Anclas internas) -->
+        <nav class="nav-menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#historia">Historia</a>
+            <a href="#albumes">Álbumes</a>
+            <a href="#galeria">Fotos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main>
+            <!-- Primer Artículo: Historia -->
+            <article class="post" id="historia">
+                <h2>Historia</h2> 
+                <p>¡Bienvenidos al blog de Los Redondos! Un espacio plenamente dedicado a repasar la historia, las letras y el mito de Patricio Rey y sus Redonditos de Ricota.</p>
+                <p>Desde sus comienzos en La Plata a mediados de los 70, la banda liderada por el Indio Solari y Skay Beilinson transformó el rock argentino en un fenómeno cultural y social sin precedentes, movilizando multitudes en las memorables "misas ricoteras".</p>
+                <a href="#albumes" class="btn-read-more">Ver sus Álbumes</a>
+            </article>
+
+            <!-- Segundo Artículo: Álbumes -->
+            <article class="post" id="albumes">
+                <h2>Los Álbumes</h2>
+                <p>La discografía de la banda marcó un antes y un después en la música nacional. Desde "Gulp!" hasta "Momo Sampler".</p>
+                <img src="images.jpeg" alt="Discografía de Los Redondos" class="post-img">
+                
+                <h3>Lobo suelto, cordero atado</h3>
+                <p>Uno de los discos dobles más icónicos del rock, lanzado en el año 1993.</p>
+                <img src="images2.jpeg" alt="Tapa de Lobo suelto cordero atado" class="post-img">  
+                <br>
+                <a href="#contacto" class="btn-read-more">Escribir en el blog</a>
+            </article>
+            <section class="post" id="galeria">
+                <h2>Fotos de la Misa</h2>
+                <p>El pogo más grande del mundo y la pasión de la gente viajando desde todas partes. ¡Dejame tu foto si estuviste ahí!</p>
+                
+                <!-- Contenedor de la cuadrícula de imágenes -->
+                <div class="photo-gallery">
+                    <div class="gallery-item">
+                        <img src="recital 1.webp" alt="Gente yendo al recital de Los Redondos" class="gallery-img">
+                        <p class="img-caption"> Nina y su padre en el recital</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="recital 2.webp" alt="Banderas ricoteras en el público" class="gallery-img">
+                        <p class="img-caption">familia unida por una unica pasion</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="recital 3.webp" alt="El pogo ricotero" class="gallery-img">
+                        <p class="img-caption"></p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="recital 4.webp" alt="El pogo ricotero" class="gallery-img">
+                        <p class="img-caption"></p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="recital 5.webp" alt="El pogo ricotero" class="gallery-img">
+                        <p class="img-caption">El choripnero</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="recital6.webp" alt="El pogo ricotero" class="gallery-img">
+                        <p class="img-caption">Encima de los baños se sentaron para ver al Indio.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="recital 7.webp" alt="El pogo ricotero" class="gallery-img">
+                        <p class="img-caption">Eterno bajo las luces</p>
+                    </div>
+                </div>
+            </section>
+                        <!-- SECCIÓN: FOTOS DE LA MISA (CON COLECTOR DE IMÁGENES) -->
+            <section class="post" id="galeria">
+                <h2>Fotos de la Misa</h2>
+                <p>El pogo más grande del mundo y la pasión de la gente viajando desde todas partes. ¡Dejame tu foto si estuviste ahí!</p>
+                <div class="upload-zone">
+                    <h3>¿Estuviste ahí? Sumá tu foto a la misa</h3>
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Imagen recibida! Pasará por moderación antes de publicarse en el altar ricotero.');">
+                        <div class="form-group">
+                            <label for="user-photo" class="custom-file-upload">
+                                <i class="fa-solid fa-cloud-arrow-up"></i> Seleccionar foto del recital
+                            </label>
+                            <!-- El input real se oculta con CSS para usar el diseño del label -->
+                            <input type="file" id="user-photo" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo-caption">Epígrafe / Anécdota corta:</label>
+                            <input type="text" id="photo-caption" placeholder="Ej: La previa en River '97, viajando con la banda..." required>
+                        </div>
+                        <button type="submit" class="btn-read-more">Subir al Altar</button>
+                    </form>
+                </div>
+                
+            </section>
+
+
+            <!-- COMENTARIOS DE LOS FANS -->
+            <section class="post comments-section">
+                <h2>Misa Ricotera (Comentarios)</h2>
+                
+                <div class="comment-box">
+                    <p class="comment-author"><i class="fa-solid fa-user-ninja"></i> Charly_Ricotero <span>• Hace 2 horas</span></p>
+                    <p class="comment-text">¡Lobo suelto es el mejor disco doble de la historia del rock nacional! Qué gran blog, Mica.</p>
+                </div>
+
+                <div class="comment-box">
+                    <p class="comment-author"><i class="fa-solid fa-user-astronaut"></i> Gulp_Fan <span>• Ayer</span></p>
+                    <p class="comment-text">Espero con ansias que subas más información sobre los primeros años en La Plata. ¡Aguante Patricio Rey!</p>
+                </div>
+
+                <!-- Formulario para dejar un comentario ficticio -->
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Gracias por dejar tu comentario en la misa!');">
+                    <div class="form-group">
+                        <label for="new-comment">Dejá tu comentario:</label>
+                        <textarea id="new-comment" rows="3" placeholder="Escribí tu opinión sobre los discos..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-read-more">Publicar comentario</button>
+                </form>
+            </section>
+            
+            <!-- Sección Contacto -->
+            <section class="post" id="contacto"> 
+                <h2>Contacto</h2>
+                <p>¿Querés compartir tu anécdota ricotera o dejar un comentario? Escribime a través de mis redes o dejamelo acá.</p>
+                
+                <!-- ÍCONOS DE REDES SOCIALES -->
+                <div class="social-networks">
+                    <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre ricotero:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o apodo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Tu mensaje / anécdota:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí acá tu comentario o historia..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-read-more">Enviar mensaje</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="blog-footer">
+            <p>Blog creado con mera pasión ricotera por <span>MICA</span> &copy; 2026</p>
+            <p>Agradecimientos muy sinceros a Juliantina</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
